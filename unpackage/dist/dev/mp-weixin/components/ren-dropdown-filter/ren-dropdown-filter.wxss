@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page.data-v-c53c40ec {
+  font-size: 28rpx;
+}
+.c-flex-align.data-v-c53c40ec {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.c-flex-center.data-v-c53c40ec {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.filter-wrapper.data-v-c53c40ec {
+  position: fixed;
+  left: 0;
+  width: 750rpx;
+  z-index: 999;
+}
+.filter-wrapper .inner-wrapper .navs.data-v-c53c40ec {
+  position: relative;
+  height: 110rpx;
+  padding: 0 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 2rpx solid #f5f6f9;
+  color: #8b9aae;
+  z-index: 999;
+  box-sizing: border-box;
+}
+.filter-wrapper .inner-wrapper .navs > view.data-v-c53c40ec {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  z-index: 999;
+}
+.filter-wrapper .inner-wrapper .navs .date.data-v-c53c40ec {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+}
+.filter-wrapper .inner-wrapper .navs .actNav.data-v-c53c40ec {
+  color: #4d7df9;
+  font-weight: bold;
+}
+.filter-wrapper .inner-wrapper .mask.data-v-c53c40ec {
+  z-index: 666;
+  position: fixed;
+  top: calc(25px + 44px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear;
+}
+.filter-wrapper .inner-wrapper .mask.show.data-v-c53c40ec {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.filter-wrapper .inner-wrapper .mask.hide.data-v-c53c40ec {
+  display: none;
+}
+.filter-wrapper .inner-wrapper .popup.data-v-c53c40ec {
+  position: relative;
+  max-height: 500rpx;
+  background-color: #fff;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  overflow: scroll;
+  z-index: 999;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  opacity: 0;
+  display: none;
+}
+.filter-wrapper .inner-wrapper .popup .item-opt.data-v-c53c40ec {
+  height: 100rpx;
+  padding: 0 40rpx;
+  color: #8b9aae;
+  border-bottom: 2rpx solid #f5f6f9;
+}
+.filter-wrapper .inner-wrapper .popup .actOpt.data-v-c53c40ec {
+  color: #4d7df9;
+  font-weight: bold;
+  position: relative;
+}
+.filter-wrapper .inner-wrapper .popup .actOpt.data-v-c53c40ec::after {
+  content: '✓';
+  font-weight: bold;
+  font-size: 36rpx;
+  position: absolute;
+  right: 40rpx;
+}
+.filter-wrapper .inner-wrapper .popupShow.data-v-c53c40ec {
+  display: block;
+  opacity: 1;
+}
+.filter-wrapper .icon-triangle.data-v-c53c40ec {
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 10rpx;
+}
+

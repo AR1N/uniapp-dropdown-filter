@@ -18,11 +18,11 @@
                     </picker>
                 </view>
             </view>
-            <view class="popup" :class="popupShow ? 'popupShow' : ''">
+            <scroll-view scroll-y="true" class="popup" :class="popupShow ? 'popupShow' : ''">
                 <view class="item-opt c-flex-align" :class="item.select ? 'actOpt' : ''" v-for="(item, index) in navData[actNav]" :key="index" @click="handleOpt(index)">
                     {{ item.text }}
                 </view>
-            </view>
+            </scroll-view>
         </view>
     </view>
 </template>
@@ -69,7 +69,7 @@ export default {
             navData: [],
             popupShow: false,
             showMask: false,
-            actNav: '',
+            actNav: null,
             selDate: '选择日期',
             selIndex: [] //选中条件索引
         };
@@ -124,7 +124,7 @@ export default {
         tapMask() {
             this.showMask = false;
             this.popupShow = false;
-            this.actNav = '';
+            this.actNav = null;
         },
         handleDate(e) {
             let d = e.detail.value;
@@ -207,7 +207,7 @@ page {
             border-bottom-right-radius: 20rpx;
             overflow: scroll;
             z-index: 999;
-            transition: all 3s linear;
+            transition: all 1s linear;
             opacity: 0;
             display: none;
             .item-opt {

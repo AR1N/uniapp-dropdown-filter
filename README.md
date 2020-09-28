@@ -3,8 +3,6 @@
 ### 简介
 > 一款下拉筛选菜单，目前只在uni-app项目中使用，其他平台适配兼容未知，如有帮助到你不胜荣幸，欢迎Star！
 
-> [DCloud插件市场地址](https://ext.dcloud.net.cn/plugin?id=2315)
-
 
 ### 调用示例
 
@@ -73,7 +71,5 @@ import RenDropdownFilter from '@/components/ren-dropdown-filter/ren-dropdown-fil
 
 ![ren-dropdown-filter](https://i.loli.net/2020/07/15/LPkWjuDlw1tgTYo.png)
 ![ren-dropdown-filter](https://i.loli.net/2020/07/15/tAkJy24buCKrSIo.png)
-
-
 ![ren-dropdown-filter](https://i.loli.net/2020/07/15/ZdOVzB8Lc13Qphe.png)
 ![ren-dropdown-filter](https://i.loli.net/2020/07/15/7xm8Aj2fNKYB45s.png)

@@ -1,0 +1,1 @@
+<view class="content"><ren-dropdown-filter vue-id="8dd740cc-1" filterData="{{filterData}}" defaultIndex="{{defaultIndex}}" data-event-opts="{{[['^onSelected',[['onSelected']]],['^dateChange',[['dateChange']]]]}}" bind:onSelected="__e" bind:dateChange="__e" bind:__l="__l"></ren-dropdown-filter></view>

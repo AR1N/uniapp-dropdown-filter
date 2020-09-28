@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "ren-dropdown-filter",
+    "navigationBarBackgroundColor": "#f2f2f2",
+    "backgroundColor": "#ffffff"
+  },
+  "usingComponents": {}
+}
