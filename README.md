@@ -8,70 +8,63 @@
 
 ### 调用示例
 
-```
-<view class="root">
-    <ren-dropdown-filter :filterData='filterData' :defaultIndex='defaultIndex'
-    @onSelected='onSelected' @dateChange='dateChange'></ren-dropdown-filter>
-</view>
-```
+``` vue
+<template>
+	<view>
+		<ren-dropdown-filter ref='renDropdownFilterRef' :filterData='filterData' :defaultIndex='defaultIndex'
+		@onSelected='onSelected'>
+		<template #other>
+			<view class="filters">
+				<view>自定义筛选条件:</view>
+				<view class="items"><view class="item" @click="onConfirm(index)" v-for="(_,index) in 6" :key='index.toString()'>选项{{index}}</view></view>
+			</view>
+		</template>
+		</ren-dropdown-filter>
+		<view class='result'>筛选数据：</view>
+		<view>{{result}}</view>
+	</view>
+</template>
 
-```
-import RenDropdownFilter from '@/components/ren-dropdown-filter/ren-dropdown-filter.vue'
-	export default {
-        components:{
-            RenDropdownFilter
-        },
-		data() {
-			return {
-				filterData:[
-                    [{ text: '全部状态', value: '' }, { text: '状态1', value: 1 }, { text: '状态2', value: 2 }, { text: '状态3', value: 3 }],
-                    [{ text: '全部类型', value: '' }, { text: '类型1', value: 1 }, { text: '类型2', value: 2 }, { text: '类型3', value: 3 }]
-                ],
-                defaultIndex:[0,0]
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-            onSelected(res){
-                console.log(res)
-            },
-            dateChange(d){
-               uni.showToast({
-                   icon:'none',
-                   title:d
-               })
+<script setup lang="ts">
+	import {ref} from 'vue'
+	import RenDropdownFilter from '@/components/ren-dropdown-filter/ren-dropdown-filter.vue'
+	const filterData = ref([
+                    [{ text: '全部状态', value: '' }, { text: '状态1', value: 1 }, { text: '状态2', value: 2 }, { text: '状态3', value: 3 }, { text: '状态4', value: 4 }, { text: '状态5', value: 5 }, { text: '状态6', value: 6 },, { text: '状态7', value: 7 }],
+                    [{ text: '全部类型', value: '' }, { text: '类型1', value: 1 }, { text: '类型2', value: 2 }, { text: '类型3', value: 3 }],
+					[{ text: '其他条件', slotName: 'other' }]
+                ])
+				const defaultIndex = ref([0,0,0])
+				const renDropdownFilterRef = ref()
+				const result = ref([])
+				const onSelected = (res)=>{
+                result.value.splice(0,2,...res)
             }
-		}
-	}
+			const onConfirm = (val)=>{
+				result.value[2]={text:'其他条件',value:val}
+				renDropdownFilterRef.value.closeMask()
+			}
+</script>
 ```
 
 ### 属性说明
 
 | 属性名 | 类型   | 默认值 | 说明   |
 | :----- | :----- | :----- | :----- |
-| filterData | Array | - | 筛选条件（二维数组） 格式：[[text: '全部状态', value: '1'],[text: '全部类型', value: '2']]|
+| filterData | Array | - | 筛选条件（二维数组） 格式：[[text: '全部状态', value: '1'],[text: '其他条件', slotName: 'other' ]]|
 | defaultIndex | Array | [0] | 默认选中条件索引 |
-| height | Number | 108 | 筛选栏高度（单位rpx） |
-| top | String | calc(var(--window-statsu-bar) + 44px) | 筛选栏距离顶部的高度 |
 | border | Boolean | false | 筛选栏顶部边框 |
 
 
-### 事件说明
+### 事件说明 
 
 | 事件名 | 说明   | 
 | :----- | :----- | 
 | onSelected | 筛选事件，返回筛选结果   |
-| dateChange | 日期筛选事件，返回筛选日期   |
+| closeMask | 关闭遮罩   |
 
-### Tips
-
-* 如果不用日期筛选可自行更改组件源代码来满足需求
 
 ### 预览
 
-![ren-dropdown-filter](https://i.loli.net/2020/07/15/LPkWjuDlw1tgTYo.png)
-![ren-dropdown-filter](https://i.loli.net/2020/07/15/tAkJy24buCKrSIo.png)
-![ren-dropdown-filter](https://i.loli.net/2020/07/15/ZdOVzB8Lc13Qphe.png)
-![ren-dropdown-filter](https://i.loli.net/2020/07/15/7xm8Aj2fNKYB45s.png)
+[![ren-dropdown-filter](https://s21.ax1x.com/2025/10/14/pVbHWwQ.png)](https://imgchr.com/i/pVbHWwQ)
+[![ren-dropdown-filter](https://s21.ax1x.com/2025/10/14/pVbHgOS.png)](https://imgchr.com/i/pVbHgOS)
+[![ren-dropdown-filter](https://s21.ax1x.com/2025/10/14/pVbHReg.png)](https://imgchr.com/i/pVbHReg)
